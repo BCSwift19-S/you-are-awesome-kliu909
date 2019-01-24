@@ -30,13 +30,29 @@ class ViewController: UIViewController {
                         "You are tremendous!",
                         "You've got the deesign skills of Jony Ive!",
                         "I can't wait to download your app!"]
-        messageLable.text = messages[index]
-        index = index+1
+
+       // var newIndex = -1
+        var newIndex: Int // declares but doesn't initialize newIndex
         
-        if index == messages.count{
-            index=0
-            
-        }
+        repeat {
+            newIndex = Int.random(in: 0..<messages.count)
+        } while index == newIndex
+        index = newIndex
+        messageLable.text = messages[index]
+        
+        
+//        messageLable.text = messages.randomElement()!
+        
+//        let randomNumber = Int.random(in: 0..<messages.count)
+//        messageLable.text = messages[randomNumber]
+//        messageLable.text = messages[index]
+//        index = index+1
+//
+//        if index == messages.count-1 {
+//            index = 0
+//        } else{
+//            index = index + 1
+//        }
         
 //        let message1 = "You Are Fantastic!!!"
 //        let message2 = "You Are Great"
